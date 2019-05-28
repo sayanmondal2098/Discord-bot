@@ -7,8 +7,8 @@ async def process(search_arg):
 
     url = "https://www.googleapis.com/customsearch/v1"
     params = {
-        "key": "AIzaSyDvkYjXwgMpO59C_jUbhlquS0pc9SJqrwE",
-        "cx": "AIzaSyALlvA36PPbEnzMzDDqbaNWENjFBiRG9eM",
+        "key": "xxxxxxxxxxxxxxx",
+        "cx": "xxxxxxxxxxx",
         "searchType": "image",
         "q": search_arg,
         "num": 1,
