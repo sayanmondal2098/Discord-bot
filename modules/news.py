@@ -11,7 +11,7 @@ def top_headlines():
     Gets top headlines from NewsAPI
     :return: <dict> discord.Embed message
     """
-    source = "google-news"  # TODO: Add option to choose source
+    source = "google-news-in"  # TODO: Add option to choose source
     try:
         r = requests.get("https://newsapi.org/v2/top-headlines?sources=" + source + "&apiKey=" + NEWS_API_TOKEN)
         data = r.json()
@@ -25,7 +25,7 @@ def top_headlines():
             image_url=imageurl
         )
         embed.set_image(url=imageurl)
-        embed.set_footer(text="Powered by NewsAPI! (newsapi.org)")
+        # embed.set_footer(text="Powered by NewsAPI! (newsapi.org)")
         return embed
     except Exception as e:
         print(e)

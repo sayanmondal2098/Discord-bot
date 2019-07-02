@@ -7,7 +7,7 @@ from modules import news, image, flip_a_coin, roll_a_dice, shorten_url
 import discord
 from discord.ext import commands
 from modules import xkcd
-from modules import lyrics
+from modules import lyrics,video
 
 bot = commands.Bot(
                    command_prefix="$",
@@ -123,6 +123,17 @@ async def get_lyrics(ctx, *, message):
     except Exception as e:
         print(e)
         await ctx.send("Sorry, something went wrong.")
+
+
+@bot.command(pass_context=True, name='video')
+async def get_video(ctx, *, message):
+    try:
+        output = video.process(message)
+        await ctx.send(output['output'])
+    except Exception as e:
+        print(e)
+        await ctx.send("Sorry, something went wrong.")
+
 
 
 
