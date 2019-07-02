@@ -1,1 +1,5 @@
-__all__ = ["xkcd", "news", "flip_a_coin", "image"]
+__all__ = ["xkcd",
+             "news",
+             "flip_a_coin",
+              "image",
+            "lyrics"]
